@@ -1,27 +1,25 @@
-#push swap
+Push Swap
 
 A Brief Summary
 
-You start with two empty stacks: a and b. You are given a random list of integers via command line arguments
-that will fill the stack a.
+You start with two empty stacks: a and b. You are given a random list of integers via command line arguments that will fill stack a.
 
-Only these moves are allowed for sort the stack:
+Only these moves are allowed to sort the stacks:
 
-    sa : swap a - swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements).
-    sb : swap b - swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements).
-    ss : sa and sb at the same time.
-    pa : push a - take the first element at the top of b and put it at the top of a. Do nothing if b is empty.
-    pb : push b - take the first element at the top of a and put it at the top of b. Do nothing if a is empty.
-    ra : rotate a - shift up all elements of stack a by 1. The first element becomes the last one.
-    rb : rotate b - shift up all elements of stack b by 1. The first element becomes the last one.
-    rr : ra and rb at the same time.
-    rra : reverse rotate a - shift down all elements of stack a by 1. The last element becomes the first one.
-    rrb : reverse rotate b - shift down all elements of stack b by 1. The last element becomes the first one.
-    rrr : rra and rrb at the same time.
+	•	sa: swap a - Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.
+	•	sb: swap b - Swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements.
+	•	ss: sa and sb - Perform sa and sb at the same time.
+	•	pa: push a - Take the first element at the top of b and put it at the top of a. Do nothing if b is empty.
+	•	pb: push b - Take the first element at the top of a and put it at the top of b. Do nothing if a is empty.
+	•	ra: rotate a - Shift up all elements of stack a by 1. The first element becomes the last one.
+	•	rb: rotate b - Shift up all elements of stack b by 1. The first element becomes the last one.
+	•	rr: ra and rb - Perform ra and rb at the same time.
+	•	rra: reverse rotate a - Shift down all elements of stack a by 1. The last element becomes the first one.
+	•	rrb: reverse rotate b - Shift down all elements of stack b by 1. The last element becomes the first one.
+	•	rrr: rra and rrb - Perform rra and rrb at the same time.
 
-At the end, stack b must be empty empty and all integers must be in stack a, sorted in ascending order. Will be printed
-on screen the list of moves needed to sort the stack.
-----------------------------------------------------------------------------------------------------------------
+At the end, stack b must be empty and all integers must be in stack a, sorted in ascending order. The list of moves needed to sort the stack will be printed on the screen.
+
 How to Run the Program
 
 To run the program:
