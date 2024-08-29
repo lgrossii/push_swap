@@ -5,40 +5,64 @@
 #                                                     +:+ +:+         +:+      #
 #    By: lgrossi <lgrossi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/07/20 12:59:57 by mcenci            #+#    #+#              #
+#    Created: 2023/07/20 12:59:57 by lgrossi            #+#    #+#              #
 #    Updated: 2023/10/04 16:31:16 by lgrossi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBFT_PATH		=	./libft
-LIBFT			=	$(LIBFT_PATH)/libft.a
-PRINTF_PATH		=   ./ft_printf
-PRINTF			=   $(PRINTF_PATH)/libftprintf.a
+GREEN				=	\033[0;32m
+BLUE				=	\033[0;34m
+RED					=	\033[0;31m
+RESET				=	\033[0m
+D_FT_PRINTF			=	ft_printf
+D_LIBFT				=	libft
+GIT_REPO_LIBFT		=	https://github.com/onetrainn/libft
+GIT_REPO_FT_PRINTF	=	https://github.com/onetrainn/ft_printf
+LIBFT_PATH			=	./libft
+LIBFT				=	$(LIBFT_PATH)/libft.a
+PRINTF_PATH			=   	./ft_printf
+PRINTF				=   	$(PRINTF_PATH)/libftprintf.a
 
-SRC				=	 ./main.c ./move_set_00.c ./move_set_01.c ./move_set_02.c ./sorting_00.c ./sorting_01.c ./sorting_02.c ./values_to_stacks.c ./Helper_00.c ./Helper_01.c ./check_values.c ./check.c ./values_to_stacks_01.c
 
-HEADER			=	./push_swap.h
+SRC					=	 ./main.c ./move_set_00.c ./move_set_01.c ./move_set_02.c ./sorting_00.c ./sorting_01.c ./sorting_02.c ./values_to_stacks.c ./Helper_00.c ./Helper_01.c ./check_values.c ./check.c ./values_to_stacks_01.c
 
-OBJECTS			= 	$(SRC:%.c=%.o)
+HEADER				=	./push_swap.h
 
-NAME			=	"push_swap"
+OBJECTS				= 	$(SRC:%.c=%.o)
 
-CC				=	gcc
+NAME				=	"push_swap"
 
-RM				=	rm -f
+CC					=	gcc
 
-CFLAGS			=	-Wall -Wextra -Werror
+RM					=	rm -f
 
-MAKEFLAGS 		+= -s
+CFLAGS				=	-Wall -Wextra -Werror
 
-all:			$(NAME)
+MAKEFLAGS 			+= -s
 
-$(NAME):	$(OBJECTS) $(LIBFT)	$(PRINTF)
-				$(CC) ${CFLAGS} -c $(SRC)
-				$(CC) $(OBJECTS) $(LIBFT) $(PRINTF) -o $(NAME)
+all:				$(NAME) 
+					@echo "$(GREEN)		Compiled $(NAME) $(RESET)"
+					@echo "now for running just type ./push_swap followed by the numbers you want to sort. will be printedd on the screen the steps needed to sort the numbers"
+
+$(NAME):	 		dependencies $(LIBFT)	$(PRINTF)	$(OBJECTS)
+					$(CC) ${CFLAGS} -c $(SRC)
+					$(CC) $(OBJECTS) $(LIBFT) $(PRINTF) -o $(NAME)
 
 $(LIBFT):
-				make -s -C $(LIBFT_PATH)
+					make -s -C $(LIBFT_PATH)
+
+dependencies:
+					echo "$(GREEN)- - - Checking all dependencies	- - - $(RESET)"
+					@if [ ! -d $(LIBFT_PATH) ]; then \
+					echo "$(RED)!!!!! LIBFT MISSING,  cloning it !!!!!$(RESET)"; \
+					git clone $(GIT_REPO_LIBFT) $(LIBFT_PATH); \
+					fi
+					@if [ ! -d $(PRINTF_PATH) ]; then \
+					echo "$(RED)!!!!! ft_printf MISSING,  cloning it   !!!!!$(RESET)"; \
+					git clone $(GIT_REPO_FT_PRINTF) $(PRINTF_PATH); \
+					fi
+					echo "$(GREEN)- - - Dependencies checked	- - - $(RESET) "
+
 
 $(PRINTF):
 				make -s -C $(PRINTF_PATH)

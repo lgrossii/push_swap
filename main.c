@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lgrossi <lgrossi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lorenzogrossi <lorenzogrossi@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:12:18 by lorenzogros       #+#    #+#             */
-/*   Updated: 2023/10/04 15:18:32 by lgrossi          ###   ########.fr       */
+/*   Updated: 2024/08/29 12:27:10 by lorenzogros      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main(int ac, char **av)
 		else if (up_or_down(a, min_number(a)) < 0)
 			rra(&a);
 	}
+	//print_t_stack(a, 1);
 	frees(&a, &b);
 	return (0);
 }
