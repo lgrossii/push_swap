@@ -2,9 +2,10 @@
 
 A Brief Summary
 
-You start with two empty stacks: a and b. You are given a random list of integers via command line arguments.
+You start with two empty stacks: a and b. You are given a random list of integers via command line arguments
+that will fill the stack a.
 
-Only these moves are allowed:
+Only these moves are allowed for sort the stack:
 
     sa : swap a - swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements).
     sb : swap b - swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements).
@@ -18,5 +19,13 @@ Only these moves are allowed:
     rrb : reverse rotate b - shift down all elements of stack b by 1. The last element becomes the first one.
     rrr : rra and rrb at the same time.
 
-At the end, stack b must be empty empty and all integers must be in stack a, sorted in ascending order.
+At the end, stack b must be empty empty and all integers must be in stack a, sorted in ascending order. Will be printed
+on screen the list of moves needed to sort the stack.
+----------------------------------------------------------------------------------------------------------------
+How to Run the Program
 
+To run the program:
+
+	1.	Clone the repository.
+	2.	Build the project by running make from the command line.
+	3.	Execute the program with the command ./push_swap, followed by a list of integers you want to sort, or a string containing it.
