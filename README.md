@@ -28,10 +28,10 @@ To run the program:
 
 1. Clone the repository:
    ```shell
-   git clone <https://github.com/onetrainn/push_swap>
+   git clone <https://github.com/onetrainn/push_swap> <directory_name>
 2. Build the project by running 'make' from the command line:
    ```shell
-	cd <repository-directory>
+	cd <directory_name>
 	make
 3. Execute the program with the command ./push_swap, followed by a list of integers you want to sort, or a string containing them:
    ```shell
