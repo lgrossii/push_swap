@@ -35,6 +35,7 @@ To run the program:
 	make
 3. Execute the program with the command ./push_swap, followed by a list of integers you want to sort, or a string containing them:
    ```shell
-	./push_swap 3 1 4 1 5 9 2 6 5 3 5 
-	OR 
+	./push_swap 3 1 4 1 5 9 2 6 5 3 5
+Alternatively:
+```shell
 	./push_swap "3 1 4 1 5 9 2 6 5 3 5"
