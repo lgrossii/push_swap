@@ -16,15 +16,15 @@ RED					=	\033[0;31m
 RESET				=	\033[0m
 D_FT_PRINTF			=	ft_printf
 D_LIBFT				=	libft
-GIT_REPO_LIBFT		=	https://github.com/onetrainn/libft
-GIT_REPO_FT_PRINTF	=	https://github.com/onetrainn/ft_printf
+GIT_REPO_LIBFT			=	https://github.com/lgrossii/libft
+GIT_REPO_FT_PRINTF		=	https://github.com/lgrossii/ft_printf
 LIBFT_PATH			=	./libft
 LIBFT				=	$(LIBFT_PATH)/libft.a
 PRINTF_PATH			=   	./ft_printf
 PRINTF				=   	$(PRINTF_PATH)/libftprintf.a
 
 
-SRC					=	 ./main.c ./move_set_00.c ./move_set_01.c ./move_set_02.c ./sorting_00.c ./sorting_01.c ./sorting_02.c ./values_to_stacks.c ./Helper_00.c ./Helper_01.c ./check_values.c ./check.c ./values_to_stacks_01.c
+SRC				=	 ./main.c ./move_set_00.c ./move_set_01.c ./move_set_02.c ./sorting_00.c ./sorting_01.c ./sorting_02.c ./values_to_stacks.c ./Helper_00.c ./Helper_01.c ./check_values.c ./check.c ./values_to_stacks_01.c
 
 HEADER				=	./push_swap.h
 
